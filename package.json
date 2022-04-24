@@ -1,0 +1,79 @@
+{
+  "name": "@gratico/fs",
+  "version": "0.8.5",
+  "author": "Abhishiv Saxena<abhishiv@gmail.com>",
+  "description": "node.js fs compactiable fs library with support for memory, indexeddb, and custom adapters",
+  "license": "UNLICENSED",
+  "keywords": [
+    "gratico-engineering"
+  ],
+  "url": "https://github.com/gratico/fs",
+  "accessConfig": {
+    "public": true
+  },
+  "files": [
+    "/dist"
+  ],
+  "main": "./dist/cjs/index.js",
+  "typings": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "make test",
+    "build": "make build"
+  },
+  "dependencies": {
+    "@gratico/checksum": "*",
+    "buffer": "^5.6.0",
+    "dexie": "^3.0.1",
+    "idb": "^7.0.0",
+    "lodash.isobject": "^3.0.2",
+    "path": "^0.12.7",
+    "shortid": "^2.2.16",
+    "sift": "^13.1.10"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "@types/lodash.isobject": "^3.0.6",
+    "@types/node": "^17.0.21",
+    "@types/shortid": "^0.0.29",
+    "babel-jest": "^27.5.1",
+    "docco": "^0.9.1",
+    "jest": "^27.5.1",
+    "typescript": "^4.1.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "reporters": [
+      "default"
+    ],
+    "setupFiles": [],
+    "transformIgnorePatterns": [
+      "node_modules"
+    ],
+    "modulePathIgnorePatterns": [
+      "__mocks__",
+      "__fixtures__",
+      "dist"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/packages/hq",
+      "<rootDir>/node_modules",
+      "<rootDir>/dist",
+      "<rootDir>/packages/ts-simple-type",
+      "<rootDir>/packages/codesense/src/__tests__/__fixtures__",
+      "<rootDir>/packages/hub/src/e2e",
+      "<rootDir>/packages/*/dist",
+      "<rootDir>/packages/shell/src/public/bundles"
+    ]
+  }
+}
